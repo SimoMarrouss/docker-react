@@ -6,4 +6,4 @@ before_install:
   - docker build -t dockersimo/my-app .
 
 script:
-  - docker run dockersimo/my-app npm run test -- --coverage
+  - docker run -e CI=true dockersimo/my-app npm run test -- --coverage
