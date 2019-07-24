@@ -5,8 +5,8 @@ services:
 before_install:
   - docker build -t dockersimo/my-app .
 
-script:
-  - docker run -e CI=true dockersimo/my-app npm run test -- --coverage
+#script:
+#  - docker run -e CI=true dockersimo/my-app npm run test -- --coverage
 
 deploy:
   provider: elasticbeanstalk
